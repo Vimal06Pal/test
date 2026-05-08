@@ -27,15 +27,16 @@ jobs:
 
     - name: Install Dependencies
       run: |
-        pip install -r requirements.txt
+        pip install -r python_app/requirements.txt
+        pip install pytest flake8
 
     - name: Run Linter
       run: |
-        flake8 app
+        flake8 python_app/app
 
     - name: Run Tests
       run: |
-        pytest
+        pytest python_app/tests
 
     - name: Deploy
       run: |
