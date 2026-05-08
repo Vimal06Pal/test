@@ -36,9 +36,8 @@ jobs:
 
     - name: Run Tests
       run: |
-        pytest python_app/tests
+        PYTHONPATH=python_app pytest python_app/tests
 
     - name: Deploy
       run: |
         echo "Deployment Successful"
-        
